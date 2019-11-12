@@ -8,6 +8,11 @@ class Sample:
         self.y = y
         return self.x + self.y
 
+    def sub(self, x, y):
+        self.x = x
+        self.y = y
+        return self.x - self.y
+
 
 if __name__ == '__main__':
     sample = Sample()
