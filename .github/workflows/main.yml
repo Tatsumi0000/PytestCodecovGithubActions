@@ -28,4 +28,4 @@ jobs:
     - name: Test with pytest
       run: PYTHONPATH=. poetry run pytest --cov=. --cov=SampleDir --cov-report=xml
     - name: Upload coverage to Codecov
-      run: bash <(curl -s https://codecov.io/bash) -t c184efae-6c63-46f9-bdfb-d7154d50d88b
+      run: bash <(curl -s https://codecov.io/bash) -t c184efae-6c63-46f9-bdfb-d7154d50d88b -c -F unittests
