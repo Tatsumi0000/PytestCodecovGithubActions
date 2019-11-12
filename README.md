@@ -1,0 +1,2 @@
+# PytestCodecovGithubActions
+Poetry，Pytest，Codecov，GithubActionsを使って試行錯誤するリポジトリ
