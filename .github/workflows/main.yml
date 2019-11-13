@@ -24,6 +24,7 @@ jobs:
         pip install poetry
     - name: Install dependencies
       run: |
+        poetry install
         poetry update
     - name: Test with pytest
       run: cd source && PYTHONPATH=. poetry run pytest --cov=. --cov=SampleDir --cov-report=xml
