@@ -19,6 +19,7 @@ source/detection_number/training_scripts/train/*
 source/detection_number/training_scripts/valid/*
 !source/detection_number/training_scripts/valid/README.md
 .idea/
+/.venv/
 
 .pytest_cache/
 
