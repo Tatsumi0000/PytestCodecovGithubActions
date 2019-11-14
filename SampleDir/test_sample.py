@@ -1,4 +1,4 @@
-from SampleDir.sample import Sample
+from sample import Sample
 
 
 def test_add():
