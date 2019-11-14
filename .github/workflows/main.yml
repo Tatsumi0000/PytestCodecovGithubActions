@@ -31,7 +31,6 @@ jobs:
             ${{ runner.os }}-poetry-
       - name: Install dependencies
         run: |
-          if: steps.cache.outputs.cache-hit != 'true'
           poetry install
       - name: Test with pytest
         run: PYTHONPATH=. poetry run pytest --cov=. --cov=SampleDir --cov-report=xml
