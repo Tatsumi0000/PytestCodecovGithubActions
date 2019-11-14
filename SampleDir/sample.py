@@ -17,3 +17,4 @@ class Sample:
 if __name__ == '__main__':
     sample = Sample()
     print('{0}'.format(sample.add(x=0, y=1)))
+    print('finished...')
