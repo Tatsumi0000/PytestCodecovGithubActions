@@ -25,10 +25,7 @@ jobs:
       - name: Get poetry cache
         uses: actions/cache@v1
         with:
-          paths:
-            - '.venv'
-            - '/usr/local/bin'
-            - '/usr/local/lib/python3.7/site-packages'
+          path: ".venv"
           key: ${{ runner.os }}-pip-${{ hashFiles('**/poetry.lock') }}
           restore-keys: |
             ${{ runner.os }}-pip-
