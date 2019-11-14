@@ -23,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
       - name: Get poetry cache
-        uses: actions/cache@preview
+        uses: actions/cache@v1
         with:
           path: .venv
           key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
