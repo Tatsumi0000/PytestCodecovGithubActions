@@ -32,6 +32,8 @@ jobs:
         run: |
           poetry config settings.virtualenvs.in-project false
           poetry config settings.virtualenvs.path ./venv
+          ls -a
+          pwd
 
       - name: Install dependencies
         run: poetry install
