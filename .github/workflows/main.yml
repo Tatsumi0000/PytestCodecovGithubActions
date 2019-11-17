@@ -23,20 +23,18 @@ jobs:
       - name: Install Poetry
         uses: dschep/install-poetry-action@v1.2
 
-      - name: Get poetry cache
+      - name: Poetry cache venv
         uses: actions/cache@v1
         with:
           path: ./.venv
           key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
           restore-keys: |
-            poetry-${{ hashFiles('**/poetry.lock') }}
+            ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
 
       - name: Set Poetry config
         run: |
           poetry config settings.virtualenvs.in-project false
           poetry config settings.virtualenvs.path ./venv
-          ls -a
-          pwd
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
