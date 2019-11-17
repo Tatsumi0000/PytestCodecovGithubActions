@@ -25,13 +25,10 @@ jobs:
       - name: Get poetry cache
         uses: actions/cache@v1
         with:
-          path: .venv
+          path: ./.venv
           key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
       - name: Install dependencies
         run: poetry install
-        if: steps.cache.outputs.cache-hit != 'true'
       - name: Test with pytest
         run: PYTHONPATH=. poetry run pytest --cov=. --cov=SampleDir --cov-report=xml
       - name: Upload coverage to Codecov
